@@ -39,3 +39,5 @@ Muchos usuarios desean llevar un registro de sus gastos, pero las aplicaciones d
 5. Guardar y Cargar Datos:
     - Guarda automáticamente los registros en un archivo JSON cada vez que se registra o actualiza un gasto.
     - Carga los datos del archivo JSON al iniciar el programa, permitiendo al usuario retomar desde donde quedó en la última sesión.
+
+ Desarrollado por Alexi Durán Gómez : C.C-1.067.031.983
