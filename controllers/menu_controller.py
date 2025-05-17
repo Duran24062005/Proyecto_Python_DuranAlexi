@@ -75,7 +75,6 @@ def list_all_cost():
         return True
 
     
-
 def sum_all_cost():
     """
         Esta funcion se encarga  de mostrar el resultado de la suma de todos los gastos registrados en el sistema.
