@@ -1,5 +1,6 @@
 # Proyecto_Python_DuranAlexi
 # Main, entrada del proyecto
+from controllers.menu_controller import *
 
 if __name__ == '__main__':
     print(" _____________________________________________")
@@ -23,35 +24,42 @@ if __name__ == '__main__':
         print('4. Generar informe de gastos')
         print('5. Salir')
         print('=============================================')
-        option = int(input('=> '))
+        option = int(input('> '))
+        print('\n')
 
         if (option == 1):
-            print('hola mundo')
+            """Registrar un nuevo costo"""
+            register_new_cost()
+            continue 
+            # La sentencia *continue* se utiliza omitir esta iteración e iniciar de nuevo en otra iteración.
+            # Permitiendo así que se controle mejor el flujo y evite que en cierto caso se 
+            # termine ejecutando hasta el else, devolviendo por pantalla lo programado.
 
         if (option == 2):
-            print('hola mundo')
+            """Ver la lista de todos los costos"""
+            list_all_cost()
+            continue
 
         if (option == 3):
-            print('hola mundo')
+            """Ver la suma del valor de todos los costos"""
+            sum_all_cost()
+            continue
 
         if (option == 4):
-            print('hola mundo')
+            """Generar un reporte con los costos"""
+            generate_cost_report()
+            continue
 
 
         if (option == 5):
-            dato = input('\n¿Quieres salir del programa ? (S/N): ')
-
-            if (dato.lower() == 's'):
-                print('Gracias por utilizar el software. Bye!!')
-                program = False
-
-            elif (dato.lower() == 'n'):
-                print('Gracias por utilizar el software. Bye!!')
-            
-            else:
-                print('Por favor, elija una opción valida!!')
-        
+            """Terminar la ejecución del programa"""
+            program = finish_program()
+            break
+            # La sentencia *break* finaliza el ciclo al ser llamada.
+              
         else:
+            """Se ejecuta si el usuario no introduce una entrada esperada"""
             print('Por favor, elija una opción valida!!')
+            continue
 
 # Desarrollado por Alexi Durán Gómez : C.C-1.067.031.983
