@@ -50,5 +50,8 @@ if __name__ == '__main__':
             
             else:
                 print('Por favor, elija una opción valida!!')
+        
+        else:
+            print('Por favor, elija una opción valida!!')
 
 # Desarrollado por Alexi Durán Gómez : C.C-1.067.031.983
