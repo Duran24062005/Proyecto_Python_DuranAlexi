@@ -40,6 +40,6 @@ Muchos usuarios desean llevar un registro de sus gastos, pero las aplicaciones d
     - Guarda automáticamente los registros en un archivo JSON cada vez que se registra o actualiza un gasto.
     - Carga los datos del archivo JSON al iniciar el programa, permitiendo al usuario retomar desde donde quedó en la última sesión.
 
-    [Docs](https://gist.github.com/programmersland/cf9362472f1b9f245415d9cee96c7aef)
+    :docs: [Docs](https://gist.github.com/programmersland/cf9362472f1b9f245415d9cee96c7aef)
 
  Desarrollado por Alexi Durán Gómez : C.C-1.067.031.983
