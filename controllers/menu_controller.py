@@ -3,8 +3,6 @@
 # con el objetivo de modularizarlo y que de está manera sea mucho más legible al igual que facil de modificar.
 # Archivo para modularizar y guardar como funciones las opciones del menu.
 from functions.functiosList import *
-from db.test_data import test_db
-import pprint
 
 def register_new_cost():
     """
@@ -29,7 +27,11 @@ def register_new_cost():
     print(f'Descripción: {description}. \n')
 
     if (option_m.lower() == 's'):
-        print('¡¡Costo guardado exitosamente!!\n')
+        success = add_new_cost(category, description, monto)
+        if success:
+            print('¡¡Costo guardado exitosamente!!\n')
+        else: 
+            print('No fue posible.')
 
     elif (option_m.lower() == 'c'):
         print('Costo no guardado!!\n')
@@ -61,15 +63,35 @@ def list_all_cost():
     if (option_l == 1):
         """Ver todos los gastos actuales"""
         print('\nEstos son todos los gastos:\n')
-        pprint.pp(test_db[0])
+        if(list_costs()):
+            print(list_costs())
+        else:
+            print('No hay costos registrados')
 
     if (option_l == 2):
         """filtro por categorias"""
-        print('Filtro por categoria exitoso.')
+        print('\nPor favor mensione la categoria: ')
+        cate = input('> ')
+        if(filter_by_category(cate)):
+            print(filter_by_category(cate))
+            print('\nFiltro por categoria exitoso.\n')
+        
+        else:
+            print('No hay datos.\n')
 
     if (option_l == 3):
         """filtro por rango de fechas"""
-        print('Filtro por rango de fehcas exitoso.')
+        print('\nEl formato es AA-MM-DD')
+        desde = input('Desde: ')
+        print('\nEl formato es AA-MM-DD')
+        hasta = input('Hasta: ')
+        range = filter_by_range_date(desde, hasta)
+        if range:
+            print(range)
+            print('Filtro por rango de fehcas exitoso.')
+
+        else:
+            print('No hay datos.\n')
 
     if (option_l == 4):
         """Volver al menu principal"""

@@ -1,7 +1,8 @@
 # Proyecto_Python_DuranAlexi
 # Funciones DDGG: Es un archivo creado para almacenar las funciones utilizadas en el 
 # proceso extracción, carga y guarda de datos en el archivo JSON para persistencia 
-
+import pathlib
+ruta = pathlib.Path.cwd()
 
 import json
 
@@ -19,6 +20,7 @@ def abrirJSON():
 def guardarJSON(dic):
     with open("./db/datos.json",'w') as outFile:
         json.dump(dic,outFile)
+    return True
 
 def cargarLogs():
     dicFinal=[]
