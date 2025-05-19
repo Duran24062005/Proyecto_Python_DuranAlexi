@@ -10,6 +10,7 @@ def register_new_cost():
     """
         Esta funcion se encarga de mostrar la parte del menú para registra un nuevo gasto.
         No recibe parametros.
+        # TODO
         Hasta el momento no retorna nada.
     """
     print('=============================================')
@@ -41,6 +42,7 @@ def list_all_cost():
     """
         Esta funcion se encarga de mostrar la parte del menú para mostrar todos los gasto registrados en el sistema.
         No recibe parametros.
+        # TODO
         Hasta el momento no retorna nada.
     """
     
@@ -79,6 +81,7 @@ def sum_all_cost():
     """
         Esta funcion se encarga  de mostrar el resultado de la suma de todos los gastos registrados en el sistema.
         No resibe parametros.
+        # TODO
         No retorna nada hasta el momento.
     """
     print('=============================================')
@@ -109,7 +112,9 @@ def sum_all_cost():
 
 def generate_cost_report():
     """
-        Esta funcion se encarga mostrar la parte del menú para registra un nuevo gasto.
+        Esta funcion se encarga mostrar la parte del menú para mostrar el screen para generar un informe de gastos.
+        No recibe parametros.
+        Hasta el momento no retorna nada.
     """
     print('=============================================')
     print('         Generar Informe de Gastos           ')

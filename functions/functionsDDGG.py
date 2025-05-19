@@ -6,6 +6,11 @@
 import json
 
 def abrirJSON():
+    """
+        Funcion abrir JSON
+        No recibe parametros.
+        Retorna el contenido del JSON
+    """
     dicFinal=[]
     with open("./db/datos.json",'r') as openFile:
         dicFinal=json.load(openFile)
