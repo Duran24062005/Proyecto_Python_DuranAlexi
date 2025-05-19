@@ -78,15 +78,63 @@ def list_all_cost():
 def sum_all_cost():
     """
         Esta funcion se encarga  de mostrar el resultado de la suma de todos los gastos registrados en el sistema.
+        No resibe parametros.
+        No retorna nada hasta el momento.
     """
-    pass
+    print('=============================================')
+    print('        Calcular el total de gastos          ')
+    print('=============================================')
+    print('Seleccione el período de cálculo:\n')
+
+    print('1. Calcular total diario.')
+    print('2. Calcular el total semanal.')
+    print('3. Calcular el total mensual.')
+    print('4. Regresar al menú principal.')
+    print('=============================================')
+    option_s = int(input('> '))
+
+    if (option_s == 1):
+        pass
+
+    if (option_s == 2):
+        pass
+
+    if (option_s == 3):
+        pass
+
+    if (option_s == 4):
+        print('\n')
+        return True
 
 
 def generate_cost_report():
     """
         Esta funcion se encarga mostrar la parte del menú para registra un nuevo gasto.
     """
-    pass
+    print('=============================================')
+    print('         Generar Informe de Gastos           ')
+    print('=============================================')
+    print('Seleccione el tipo de informe:\n')
+
+    print('1. Reporte diario')
+    print('2. Informe semanal')
+    print('3. Informe mensual')
+    print('4. Regresar al menú principal')
+    print('=============================================')
+    option_p = int(input('> '))
+
+    if (option_p == 1):
+        pass
+
+    if (option_p == 2):
+        pass
+
+    if (option_p == 3):
+        pass
+
+    if (option_p == 4):
+        print('\n')
+        return True
 
 
 def finish_program():

@@ -3,6 +3,7 @@
 from controllers.menu_controller import *
 
 if __name__ == '__main__':
+    """Esta es la entrada principal del programa."""
     print(" _____________________________________________")
     print("|=============================================|")
     print("|========= Welcome to my Software ============|")
