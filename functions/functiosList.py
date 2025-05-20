@@ -4,7 +4,7 @@
 from datetime import datetime
 from db.test_data import test_db
 from functions.crud_persistent import *
-from functions.auxfunctions import recort_date
+from functions.auxfunctions import *
 
 def add_new_cost(category, description, monto):
     """
@@ -51,16 +51,35 @@ def filter_by_category(category):
         return False
 
 # TODO
-def filter_by_range_date(_from, to):
+def filter_by_range_date(por, _from, to,):
     rngs = []
     datos = abrirJSON()
-    for i in range(len(datos)):
-        if (datos[i]['fecha'] == range(_from, to)):
-            rngs.append(datos[i])
-    if rngs:
-        return rngs  
-    else:
-        return False
+    if (por == 1):
+        for i in range(len(datos)):
+            if (range(_from, to) == recort_date_year(datos[i]['fecha'])):
+                print(datos[i])
+        # if rngs:
+            # return rngs  
+        # else:
+            # return False
+
+    if (por == 2):
+        for i in range(len(datos)):
+            if (range(_from, to) == recort_date_mont(datos[i]['fecha'])):
+                print(datos[i])
+        if rngs:
+            return rngs  
+        else:
+            return False
+
+    if (por == 2):
+        for i in range(len(datos)):
+            if (range(_from, to) == recort_date_day(datos[i]['fecha'])):
+                print(datos[i])
+        if rngs:
+            return rngs  
+        else:
+            return False
     
 
 def total_cost():

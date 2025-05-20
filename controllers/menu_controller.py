@@ -3,6 +3,7 @@
 # con el objetivo de modularizarlo y que de está manera sea mucho más legible al igual que facil de modificar.
 # Archivo para modularizar y guardar como funciones las opciones del menu.
 from functions.functiosList import *
+from tabulate import tabulate
 
 def register_new_cost():
     """
@@ -64,7 +65,7 @@ def list_all_cost():
         """Ver todos los gastos actuales"""
         print('\nEstos son todos los gastos:\n')
         if(list_costs()):
-            print(list_costs())
+            print(tabulate(list_costs(), headers='keys', tablefmt='rounded_grid'))
         else:
             print('No hay costos registrados')
 
@@ -72,8 +73,10 @@ def list_all_cost():
         """filtro por categorias"""
         print('\nPor favor mensione la categoria: ')
         cate = input('> ')
+        header = ["fecha", "categoria", "descripcion", "monto"]
         if(filter_by_category(cate)):
-            print(filter_by_category(cate))
+            print(' ')
+            print(tabulate(filter_by_category(cate), headers = "keys", tablefmt='rounded_grid'))
             print('\nFiltro por categoria exitoso.\n')
         
         else:
@@ -85,9 +88,14 @@ def list_all_cost():
         desde = input('Desde: ')
         print('\nEl formato es AA-MM-DD')
         hasta = input('Hasta: ')
-        range = filter_by_range_date(desde, hasta)
+        print('\nElije para filtrar:')
+        print('\t1. Por año.')
+        print('\t2. Por mes.')
+        print('\t3. Por día.')
+        by = int(input('> '))
+        ranges = filter_by_range_date(by, desde, hasta)
         if range:
-            print(range)
+            print(tabulate(ranges, headers='keys', tablefmt='rounded_grid'))
             print('Filtro por rango de fehcas exitoso.')
 
         else:

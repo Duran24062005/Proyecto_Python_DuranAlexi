@@ -1,50 +1,56 @@
 [
-  {
-    "fecha": "2025-05-16",
-    "categoria": "Alimentaci",
-    "descripcion": "Almuerzo en restaurante",
-    "monto": 18000
-  },
-  {
-    "fecha": "2025-05-16",
-    "categoria": "Transporte",
-    "descripcion": "Pasaje de bus",
-    "monto": 2800
-  },
-  {
-    "fecha": "2025-05-15",
-    "categoria": "Entretenimiento",
-    "descripcion": "Suscripci\u00f3n a Netflix",
-    "monto": 16900
-  },
-  {
-    "fecha": "2025-05-17",
-    "categoria": "comida",
-    "descripcion": "si",
-    "monto": "12345"
-  },
-  {
-    "fecha": 34,
-    "categoria": "transporte",
-    "descripcion": "no",
-    "monto": "3000"
-  },
-  {
-    "fecha": "2025-05-19 12:04:09.612173",
-    "categoria": "entrenamiento",
-    "descripcion": "si",
-    "monto": "3400"
-  },
-  {
-    "fecha": "12:12:28.483831",
-    "categoria": "comida",
-    "descripcion": "si",
-    "monto": "23850"
-  },
-  {
-    "fecha": "2025-05-19",
-    "categoria": "comida",
-    "descripcion": "si",
-    "monto": "23000"
-  }
-]   
+    {
+        "fecha": "2025-05-16",
+        "categoria": "Alimentaci",
+        "descripcion": "Almuerzo en restaurante",
+        "monto": 18000
+    },
+    {
+        "fecha": "2025-05-16",
+        "categoria": "Transporte",
+        "descripcion": "Pasaje de bus",
+        "monto": 2800
+    },
+    {
+        "fecha": "2025-05-15",
+        "categoria": "Entretenimiento",
+        "descripcion": "Suscripción a Netflix",
+        "monto": 16900
+    },
+    {
+        "fecha": "2025-05-17",
+        "categoria": "comida",
+        "descripcion": "si",
+        "monto": "12345"
+    },
+    {
+        "fecha": "2025-05-20",
+        "categoria": "transporte",
+        "descripcion": "no",
+        "monto": "3000"
+    },
+    {
+        "fecha": "2025-05-19",
+        "categoria": "entrenamiento",
+        "descripcion": "si",
+        "monto": "3400"
+    },
+    {
+        "fecha": "2025-05-16",
+        "categoria": "comida",
+        "descripcion": "si",
+        "monto": "23850"
+    },
+    {
+        "fecha": "2025-05-19",
+        "categoria": "comida",
+        "descripcion": "si",
+        "monto": "23000"
+    },
+    {
+        "fecha": "2025-05-19",
+        "categoria": "entretenimiento",
+        "descripcion": "Fui al gimnasio a pagar la mensualidad",
+        "monto": "50000"
+    }
+]
