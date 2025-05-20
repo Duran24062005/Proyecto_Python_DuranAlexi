@@ -1,5 +1,17 @@
 [
     {
+        "fecha": "2024-05-16",
+        "categoria": "Alimentaci",
+        "descripcion": "Almuerzo en restaurante",
+        "monto": 18000
+    },
+    {
+        "fecha": "2024-05-16",
+        "categoria": "Alimentaci",
+        "descripcion": "Almuerzo en restaurante",
+        "monto": 18000
+    },
+    {
         "fecha": "2025-05-16",
         "categoria": "Alimentaci",
         "descripcion": "Almuerzo en restaurante",
@@ -14,7 +26,7 @@
     {
         "fecha": "2025-05-15",
         "categoria": "Entretenimiento",
-        "descripcion": "Suscripción a Netflix",
+        "descripcion": "Suscripci\u00f3n a Netflix",
         "monto": 16900
     },
     {
@@ -52,5 +64,17 @@
         "categoria": "entretenimiento",
         "descripcion": "Fui al gimnasio a pagar la mensualidad",
         "monto": "50000"
+    },
+    {
+        "fecha": "2025-05-20",
+        "categoria": "Viaje",
+        "descripcion": "no",
+        "monto": "204059"
+    },
+    {
+        "fecha": "2025-05-20",
+        "categoria": "Comida",
+        "descripcion": "sio",
+        "monto": "20000"
     }
 ]

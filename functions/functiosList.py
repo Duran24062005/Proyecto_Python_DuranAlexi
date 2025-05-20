@@ -11,7 +11,7 @@ def add_new_cost(category, description, monto):
         Esta función se encarga de aislar la logica de creación de un nuevo gasto, llamando las funciones para guardar en la base de datos
     """
     gasto = {
-        "fecha": recort_date(str(datetime.now())),
+        "fecha": str(datetime.now().strftime('%Y-%m-%d')),
         "categoria": category,
         "descripcion": description,
         "monto": monto
@@ -55,19 +55,19 @@ def filter_by_range_date(por, _from, to,):
     rngs = []
     datos = abrirJSON()
     if (por == 1):
-        desde = recort_date_year(_from)
-        hasta = recort_date_year(to)
+        desde = datetime.strptime(_from, '%Y-%m-%d').year
+        hasta = datetime.strptime(to, '%Y-%m-%d').year
+        print(desde, hasta)
+        print(type(desde), type(hasta))
         for i in range(len(datos)):
-            print(datos[i]['fecha'])
-            print(recort_date_year(datos[i]['fecha']))
-
-            # if (range(desde, hasta) == recort_date_year(datos[i]['fecha'])  and (recort_date_year(datos[i]['fecha']) is not None)):
-                # if (range(desde, hasta) == recort_date_year(datos[i]['fecha'])):
-                    # print(datos[i])
-        # if rngs:
-            # return rngs  
-        # else:
-            # return False
+            for j in range(desde, hasta):
+                print(j)
+            #print(range(desde, hasta) == datetime.strptime(datos[i]['fecha'], '%Y-%m-%d').year)
+                #rngs.append(datos[i])
+        if rngs:
+            return rngs  
+        else:
+            return False
 
     if (por == 2):
         desde = recort_date_mont(_from)

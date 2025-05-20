@@ -94,7 +94,7 @@ def list_all_cost():
         print('\t3. Por día.')
         by = int(input('> '))
         ranges = filter_by_range_date(by, desde, hasta)
-        if range:
+        if ranges:
             print(tabulate(ranges, headers='keys', tablefmt='rounded_grid'))
             print('Filtro por rango de fehcas exitoso.')
 

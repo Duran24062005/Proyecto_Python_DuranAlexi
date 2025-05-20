@@ -4,15 +4,6 @@
 from db import test_data
 
 # Recortar fechas en por los espacios en blanco
-def recort_date(date: str):
-    """
-        Está función se encarga de recortar fechas en formato string.
-        Recibe la fecha como parametro.
-        retorna el primer indice de una lista obtenida al aplicar el metodo de string .split()
-    """
-    list = date.split()
-    return list[0]
-
 def recort_date_year(date: str):
     """
         Está función se encarga de recortar fechas en formato string.
