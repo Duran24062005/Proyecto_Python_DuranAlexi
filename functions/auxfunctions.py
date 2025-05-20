@@ -30,7 +30,7 @@ def recort_date_mont(date: str):
         retorna el primer indice de una lista obtenida al aplicar el metodo de string .split() con el valor en tipo entero
     """
     list = date.split('-')
-    print(list[1])
+    print(int(list[1]))
 
 def recort_date_day(date):
     """

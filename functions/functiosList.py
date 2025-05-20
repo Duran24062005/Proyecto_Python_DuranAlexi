@@ -55,17 +55,25 @@ def filter_by_range_date(por, _from, to,):
     rngs = []
     datos = abrirJSON()
     if (por == 1):
+        desde = recort_date_year(_from)
+        hasta = recort_date_year(to)
         for i in range(len(datos)):
-            if (range(_from, to) == recort_date_year(datos[i]['fecha'])):
-                print(datos[i])
+            print(datos[i]['fecha'])
+            print(recort_date_year(datos[i]['fecha']))
+
+            # if (range(desde, hasta) == recort_date_year(datos[i]['fecha'])  and (recort_date_year(datos[i]['fecha']) is not None)):
+                # if (range(desde, hasta) == recort_date_year(datos[i]['fecha'])):
+                    # print(datos[i])
         # if rngs:
             # return rngs  
         # else:
             # return False
 
     if (por == 2):
+        desde = recort_date_mont(_from)
+        hasta = recort_date_mont(to)
         for i in range(len(datos)):
-            if (range(_from, to) == recort_date_mont(datos[i]['fecha'])):
+            if (range(desde, hasta) == recort_date_mont(datos[i]['fecha'])):
                 print(datos[i])
         if rngs:
             return rngs  
@@ -73,8 +81,10 @@ def filter_by_range_date(por, _from, to,):
             return False
 
     if (por == 2):
+        desde = recort_date_day(_from)
+        hasta = recort_date_day(to)
         for i in range(len(datos)):
-            if (range(_from, to) == recort_date_day(datos[i]['fecha'])):
+            if (range(desde, hasta) == recort_date_day(datos[i]['fecha'])):
                 print(datos[i])
         if rngs:
             return rngs  
