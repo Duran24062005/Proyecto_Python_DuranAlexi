@@ -13,6 +13,7 @@ def add_new_cost(category, description, monto):
         Retorna True si se crea exitosamente el usuario, o False si no se logra.
 
     """
+    # TODO Paersear a entero el monto
     gasto = {
         "id": create_id(),
         "fecha": str(datetime.now().strftime('%Y-%m-%d')),
@@ -114,16 +115,48 @@ def filter_by_range_date(por, _from, to,):
             return False
     
 
-def total_cost():
+def total_cost(opt):
     """
-    Esta función
+    Esta función suma el total de los gastos.
+    Recibe una opción como parametro.
+    Puede retornar la suma de todos los gastos:
+        1. Del día.
+        2. De la ultima semana.
+        3. Del ultimo mes.
     """
+    datos = abrirJSON()
 
-def cost_report():
+    if (opt == 1):
+        """Suma de los gastos del día"""
+        pass
+
+    if (opt == 2):
+        """Suma de los gastos del la ultima semana"""
+        pass
+
+    if (opt == 3):
+        """Suma de los gastos del ultimo mes"""
+        pass
+
+def cost_report(opts):
     """
-    Esta función
+    Esta función genera reportes.
+    Recice una opción como parametro.
+    Retorno:
+        1. Genera un reporte con los gastos del día actual.
+        2. Genera un reporte con los gastos de la última semana.
+        3. Genera un reporte con los gastos del último mes.
     """
-    pass
+    if(opts == 1):
+        """Genera un reporte con los gastos del día actual."""
+        pass
+
+    if (opts == 2):
+        """Genera un reporte con los gastos de la última semana."""
+
+    if (opts == 3):
+        """Genera un reporte con los gastos del último mes."""
+        pass
   
 
 

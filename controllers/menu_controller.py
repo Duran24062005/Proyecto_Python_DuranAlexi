@@ -118,9 +118,9 @@ def sum_all_cost():
         Esta funcion se encarga  de mostrar el resultado de la suma de todos los gastos registrados en el sistema.
         No resibe parametros.
         No tiene retorno.
-        1. muestra por pantalla la suma de todos los gastos de un día.
-        2. muestra por pantalla la suma de todos los gastos de una semana.
-        3. muestra por pantalla la suma de todos los gastos de un mes.
+        1. Calcula y muestra el total de gastos del día actual.
+        2. Calcula y muestra el total de gastos de los últimos siete días.
+        3. Calcula y muestra el total de gastos del último mes.
     """
     print('=============================================')
     print('        Calcular el total de gastos          ')
@@ -135,15 +135,15 @@ def sum_all_cost():
     option_s = int(input('> '))
 
     if (option_s == 1):
-        """Suma de todos los gastos de un día."""
+        """Calcula y muestra el total de gastos del día actual."""
         pass
 
     if (option_s == 2):
-        """Suma de todos los gastos de una semana."""
+        """Calcula y muestra el total de gastos de los últimos siete días."""
         pass
 
     if (option_s == 3):
-        """Suma de todos los gastos de un mes."""
+        """Calcula y muestra el total de gastos del último mes."""
         pass
 
     if (option_s == 4):
