@@ -9,11 +9,14 @@ from functions.auxfunctions import *
 def add_new_cost(category, description, monto):
     """
         Esta función se encarga de aislar la logica de creación de un nuevo gasto, llamando las funciones para guardar en la base de datos
+        Recibe tres parametros: categoria, descripción y monto
+        Retorna True si se crea exitosamente el usuario, o False si no se logra.
+
     """
     gasto = {
         "id": create_id(),
         "fecha": str(datetime.now().strftime('%Y-%m-%d')),
-        "hora": str(datetime.now().strftime('%H-%M-%S')),
+        "hora": str(datetime.now().strftime('%H:%M:%S')),
         "categoria": category,
         "descripcion": description,
         "monto": monto
@@ -43,6 +46,11 @@ def list_costs():
         return False
     
 def filter_by_category(category):
+    """
+    Esta función fltra por categoria.
+    Recibe el nombre de la categoria como argumento de tipo string.
+     Retorna una lista de los elementos que pertenecen a esa categoria
+    """
     categorys = []
     datos = abrirJSON()
     for i in range(len(datos)):
@@ -55,9 +63,18 @@ def filter_by_category(category):
 
 # TODO
 def filter_by_range_date(por, _from, to,):
+    """
+    Esta función está diseñada para filtrar por año, meses y dias.
+    Recibe 3 parametros: 
+            por: es un entero entregado como opción por el usuario.
+            from: momento desde el que se quiere filtar.
+            to: momento hasta el cual se quiere filtrar.
+    Retorna una lista con los elementos filtrados.
+    """
     rngs = []
     datos = abrirJSON()
     if (por == 1):
+        """Filtrar por rango de años"""
         desde = datetime.strptime(_from, '%Y-%m-%d').year
         hasta = datetime.strptime(to, '%Y-%m-%d').year
         
@@ -71,6 +88,7 @@ def filter_by_range_date(por, _from, to,):
             return False
 
     if (por == 2):
+        """Filtrar por rango de mesese"""
         desde = datetime.strptime(_from, '%Y-%m-%d').month
         hasta = datetime.strptime(to, '%Y-%m-%d').month
         for i in range(len(datos)):
@@ -83,6 +101,7 @@ def filter_by_range_date(por, _from, to,):
             return False
 
     if (por == 2):
+        """Filtar por rango de dias"""
         desde = datetime.strptime(_from, '%Y-%m-%d').day
         hasta = datetime.strptime(to, '%Y-%m-%d').day
         for i in range(len(datos)):

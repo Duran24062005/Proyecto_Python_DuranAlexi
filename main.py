@@ -18,16 +18,17 @@ if __name__ == '__main__':
 
     program = True
     while program:
+        """Menu progrogram"""
         print('=============================================')
         print('       Simulador de Gasto Diario             ')
         print('=============================================')
-        print('Seleccione una opción: ')
+        print('Seleccione una opción: \n')
 
         print('1. Registrar nuevo gasto')
         print('2. Listar gastos')
         print('3. Calcular el total de gastos')
         print('4. Generar informe de gastos')
-        print('5. Salir')
+        print('5. Salir\n')
         print('=============================================')
         option = int(input('> '))
         print('\n')

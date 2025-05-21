@@ -2,14 +2,14 @@
     {
         "id": 1,
         "fecha": "2024-05-16",
-        "categoria": "Alimentaci",
+        "categoria": "Alimentacito",
         "descripcion": "Almuerzo en restaurante",
         "monto": 18000
     },
     {
         "id": 2,
         "fecha": "2024-05-16",
-        "categoria": "Alimentaci",
+        "categoria": "comida",
         "descripcion": "Almuerzo en restaurante",
         "monto": 18000
     },
@@ -23,7 +23,7 @@
     {
         "id": 4,
         "fecha": "2025-05-21",
-        "hora": "08-45-54",
+        "hora": "08:45:54",
         "categoria": "Transporte",
         "descripcion": "Viaje a campuslands con mis bros.",
         "monto": "34000"

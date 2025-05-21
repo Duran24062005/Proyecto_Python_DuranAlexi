@@ -10,7 +10,9 @@ def register_new_cost():
         Esta funcion se encarga de mostrar la parte del menú para registra un nuevo gasto.
         No recibe parametros.
         # TODO
-        Hasta el momento no retorna nada.
+        Muestra por pantalla el mesanje ¡¡Costo guardado exitosamente!! si fue creado correctamente.
+        O el mensaje Costo no guardado!! si no lo fue.
+        Y ¡Por favor, elija una opción valida! en el dado caso.
     """
     print('=============================================')
     print('         Registrador Nuevo Gasto             ')
@@ -28,6 +30,7 @@ def register_new_cost():
     print(f'Descripción: {description}. \n')
 
     if (option_m.lower() == 's'):
+        """Guardar el costo generado"""
         success = add_new_cost(category, description, monto)
         if success:
             print('¡¡Costo guardado exitosamente!!\n')
@@ -35,6 +38,7 @@ def register_new_cost():
             print('No fue posible.')
 
     elif (option_m.lower() == 'c'):
+        """No guardar el costo generado"""
         print('Costo no guardado!!\n')
 
     else:
@@ -45,8 +49,10 @@ def list_all_cost():
     """
         Esta funcion se encarga de mostrar la parte del menú para mostrar todos los gasto registrados en el sistema.
         No recibe parametros.
-        # TODO
-        Hasta el momento no retorna nada.
+        Dependiendo de la opción entregado porel usuario retora o no retorna nada.
+            1. Muestra por pantalla una lista de todos los gastos.
+            2. Muestra por pantalla una lista de los gastos pertenecientes a una categoria.
+            3. Muestra por pantalla una lista de los gastos filtrados por fechaa: año, mes o día.
     """
     
     print('=============================================')
@@ -111,8 +117,10 @@ def sum_all_cost():
     """
         Esta funcion se encarga  de mostrar el resultado de la suma de todos los gastos registrados en el sistema.
         No resibe parametros.
-        # TODO
-        No retorna nada hasta el momento.
+        No tiene retorno.
+        1. muestra por pantalla la suma de todos los gastos de un día.
+        2. muestra por pantalla la suma de todos los gastos de una semana.
+        3. muestra por pantalla la suma de todos los gastos de un mes.
     """
     print('=============================================')
     print('        Calcular el total de gastos          ')
@@ -127,15 +135,19 @@ def sum_all_cost():
     option_s = int(input('> '))
 
     if (option_s == 1):
+        """Suma de todos los gastos de un día."""
         pass
 
     if (option_s == 2):
+        """Suma de todos los gastos de una semana."""
         pass
 
     if (option_s == 3):
+        """Suma de todos los gastos de un mes."""
         pass
 
     if (option_s == 4):
+        """Volver al menú de incio."""
         print('\n')
         return True
 
@@ -144,7 +156,11 @@ def generate_cost_report():
     """
         Esta funcion se encarga mostrar la parte del menú para mostrar el screen para generar un informe de gastos.
         No recibe parametros.
-        Hasta el momento no retorna nada.
+        No tiene retorno.
+        Puede mostrar por pantalla:
+            1. Calcula y muestra el total de gastos del día actual.
+            2. Calcula y muestra el total de gastos de los últimos siete días.
+            3. Calcula y muestra el total de gastos del último mes.
     """
     print('=============================================')
     print('         Generar Informe de Gastos           ')
