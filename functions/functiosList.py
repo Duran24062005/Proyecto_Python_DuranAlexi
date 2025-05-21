@@ -13,7 +13,7 @@ def add_new_cost(category, description, monto):
         Retorna True si se crea exitosamente el usuario, o False si no se logra.
 
     """
-    # TODO Paersear a entero el monto
+    # TODO Parsear a entero el monto
     gasto = {
         "id": create_id(),
         "fecha": str(datetime.now().strftime('%Y-%m-%d')),
@@ -115,7 +115,7 @@ def filter_by_range_date(por, _from, to,):
             return False
     
 
-def total_cost(opt):
+def total_cost(opt, today):
     """
     Esta función suma el total de los gastos.
     Recibe una opción como parametro.
@@ -124,19 +124,33 @@ def total_cost(opt):
         2. De la ultima semana.
         3. Del ultimo mes.
     """
+    costo = 0
     datos = abrirJSON()
 
     if (opt == 1):
         """Suma de los gastos del día"""
-        pass
+        for i in range(len(datos)):
+            if (int(datetime.strptime(datos[i]['fecha'], '%Y-%m-%d').day) == today):
+                costo += int(datos[i]['monto'])
 
-    if (opt == 2):
+        return costo
+    # TODO
+    elif (opt == 2):
         """Suma de los gastos del la ultima semana"""
-        pass
+        for i in range(len(datos)):
+            fecha = int(datetime.strptime(datos[i]['fecha'], '%Y-%m-%d').day)
+            if (fecha <= today-7 and fecha == today):
+                costo += int(datos[i]['monto'])
 
-    if (opt == 3):
+        return costo
+    # TODO
+    elif (opt == 3):
         """Suma de los gastos del ultimo mes"""
-        pass
+        for i in range(len(datos)):
+            if (int(datetime.strptime(datos[i]['fecha'], '%Y-%m-%d').day) <= today-30):
+                costo += int(datos[i]['monto'])
+
+        return costo
 
 def cost_report(opts):
     """

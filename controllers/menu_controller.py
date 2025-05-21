@@ -133,18 +133,20 @@ def sum_all_cost():
     print('4. Regresar al menú principal.')
     print('=============================================')
     option_s = int(input('> '))
+    hoy = int(datetime.now().strftime('%d'))
 
     if (option_s == 1):
         """Calcula y muestra el total de gastos del día actual."""
-        pass
+        mes = int(datetime.now().strftime('%m'))
+        print(f'\nGasto total del del dia de hoy {hoy} del mes {mes}: {total_cost(option_s, hoy)}')
 
     if (option_s == 2):
         """Calcula y muestra el total de gastos de los últimos siete días."""
-        pass
+        print(total_cost(option_s, hoy))
 
     if (option_s == 3):
         """Calcula y muestra el total de gastos del último mes."""
-        pass
+        print(total_cost(option_s, hoy))
 
     if (option_s == 4):
         """Volver al menú de incio."""
