@@ -41,5 +41,7 @@ Muchos usuarios desean llevar un registro de sus gastos, pero las aplicaciones d
     - Carga los datos del archivo JSON al iniciar el programa, permitiendo al usuario retomar desde donde quedó en la última sesión.
 
     :books: [Docs](https://gist.github.com/programmersland/cf9362472f1b9f245415d9cee96c7aef)
+    
+    :movie_camera: [Video de sustentación](https://youtube.com)
 
  Desarrollado por Alexi Durán Gómez : C.C-1.067.031.983
