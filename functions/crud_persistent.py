@@ -38,4 +38,6 @@ def logsJSON(dic):
     with open("./db/logs.json",'w') as outFile:
         json.dump(dicTemporal,outFile)
 
+    return True
+
 # Desarrollado por Alexi Durán Gómez : C.C-1.067.031.983

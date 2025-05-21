@@ -2,14 +2,14 @@
     {
         "id": 1,
         "fecha": "2024-05-16",
-        "categoria": "Alimentaci",
-        "descripcion": "Almuerzo en restaurante",
+        "categoria": "Entretenimiento",
+        "descripcion": "Salida al cine con mis amigos",
         "monto": 18000
     },
     {
         "id": 2,
         "fecha": "2024-05-16",
-        "categoria": "Alimentaci",
+        "categoria": "Alimentacion",
         "descripcion": "Almuerzo en restaurante",
         "monto": 18000
     },

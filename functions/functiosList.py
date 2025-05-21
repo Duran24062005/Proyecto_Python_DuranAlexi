@@ -11,7 +11,9 @@ def add_new_cost(category, description, monto):
         Esta función se encarga de aislar la logica de creación de un nuevo gasto, llamando las funciones para guardar en la base de datos
     """
     gasto = {
+        "id": create_id(),
         "fecha": str(datetime.now().strftime('%Y-%m-%d')),
+        "hora": str(datetime.now().strftime('%H-%M-%S')),
         "categoria": category,
         "descripcion": description,
         "monto": monto
@@ -20,8 +22,9 @@ def add_new_cost(category, description, monto):
     json_datos.append(gasto)
 
     new_list_costs = guardarJSON(json_datos)
+    new_log = logsJSON(gasto)
 
-    if (new_list_costs):
+    if (new_list_costs and new_log):
         return True
     
     else:
@@ -57,35 +60,35 @@ def filter_by_range_date(por, _from, to,):
     if (por == 1):
         desde = datetime.strptime(_from, '%Y-%m-%d').year
         hasta = datetime.strptime(to, '%Y-%m-%d').year
-        print(desde, hasta)
-        print(type(desde), type(hasta))
+        
         for i in range(len(datos)):
-            for j in range(desde, hasta):
-                print(j)
-            #print(range(desde, hasta) == datetime.strptime(datos[i]['fecha'], '%Y-%m-%d').year)
-                #rngs.append(datos[i])
+            anio = datetime.strptime(datos[i]['fecha'], '%Y-%m-%d').year
+            if desde <= anio <= hasta:
+                rngs.append(datos[i])
         if rngs:
             return rngs  
         else:
             return False
 
     if (por == 2):
-        desde = recort_date_mont(_from)
-        hasta = recort_date_mont(to)
+        desde = datetime.strptime(_from, '%Y-%m-%d').month
+        hasta = datetime.strptime(to, '%Y-%m-%d').month
         for i in range(len(datos)):
-            if (range(desde, hasta) == recort_date_mont(datos[i]['fecha'])):
-                print(datos[i])
+            month = datetime.strptime(datos[i]['fecha'], '%Y-%m-%d').month
+            if desde <= month <= hasta:
+                rngs.append(datos[i])
         if rngs:
             return rngs  
         else:
             return False
 
     if (por == 2):
-        desde = recort_date_day(_from)
-        hasta = recort_date_day(to)
+        desde = datetime.strptime(_from, '%Y-%m-%d').day
+        hasta = datetime.strptime(to, '%Y-%m-%d').day
         for i in range(len(datos)):
-            if (range(desde, hasta) == recort_date_day(datos[i]['fecha'])):
-                print(datos[i])
+            day = datetime.strptime(datos[i]['fecha'], '%Y-%m-%d').month
+            if desde <= day <= hasta:
+                rngs.append(datos[i])
         if rngs:
             return rngs  
         else:
@@ -96,9 +99,6 @@ def total_cost():
     """
     Esta función
     """
-    gastos = abrirJSON()
-    for i in range(len(gastos)):
-        print(gastos['monto'])
 
 def cost_report():
     """

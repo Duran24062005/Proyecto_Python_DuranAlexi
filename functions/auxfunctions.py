@@ -2,6 +2,7 @@
 # la mudularización del proyecto, con el objetivo de contribuir a la facilidad 
 # para leer e interpretar el código.
 from db import test_data
+from functions.crud_persistent import *
 
 # Recortar fechas en por los espacios en blanco
 def recort_date_year(date: str):
@@ -31,6 +32,15 @@ def recort_date_day(date):
     """
     list = date.split('-')
     print(list[2])
+
+
+def create_id():
+    datos = cargarLogs()
+    if (datos):
+        return datos[-1]['id']+1
+    else:
+        print('No hay datos en el base central!')
+
 
 
 # Desarrollado por Alexi Durán Gómez : C.C-1.067.031.983
