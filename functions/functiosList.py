@@ -13,14 +13,13 @@ def add_new_cost(category, description, monto):
         Retorna True si se crea exitosamente el usuario, o False si no se logra.
 
     """
-    # TODO Parsear a entero el monto
     gasto = {
         "id": create_id(),
         "fecha": str(datetime.now().strftime('%Y-%m-%d')),
         "hora": str(datetime.now().strftime('%H:%M:%S')),
         "categoria": category,
         "descripcion": description,
-        "monto": monto
+        "monto": int(monto)
     }
     json_datos = abrirJSON()
     json_datos.append(gasto)
@@ -88,7 +87,7 @@ def filter_by_range_date(por, _from, to,):
         else:
             return False
 
-    if (por == 2):
+    elif (por == 2):
         """Filtrar por rango de mesese"""
         desde = datetime.strptime(_from, '%Y-%m-%d').month
         hasta = datetime.strptime(to, '%Y-%m-%d').month
@@ -101,7 +100,7 @@ def filter_by_range_date(por, _from, to,):
         else:
             return False
 
-    if (por == 2):
+    elif (por == 2):
         """Filtar por rango de dias"""
         desde = datetime.strptime(_from, '%Y-%m-%d').day
         hasta = datetime.strptime(to, '%Y-%m-%d').day
@@ -165,10 +164,10 @@ def cost_report(opts):
         """Genera un reporte con los gastos del día actual."""
         pass
 
-    if (opts == 2):
+    elif (opts == 2):
         """Genera un reporte con los gastos de la última semana."""
 
-    if (opts == 3):
+    elif (opts == 3):
         """Genera un reporte con los gastos del último mes."""
         pass
   

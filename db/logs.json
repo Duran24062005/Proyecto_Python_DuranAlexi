@@ -18,7 +18,7 @@
         "fecha": "2025-05-21",
         "categoria": "Transporte",
         "descripcion": "Mensualidad en campuslands",
-        "monto": "345000"
+        "monto": 345000
     },
     {
         "id": 4,
@@ -26,7 +26,7 @@
         "hora": "08-45-54",
         "categoria": "Transporte",
         "descripcion": "Viaje a campuslands con mis bros.",
-        "monto": "34000"
+        "monto": 34000
     },
     {
         "id": 5,
@@ -34,6 +34,6 @@
         "hora": "11:43:56",
         "categoria": "avanico",
         "descripcion": "estaba haciendo calor",
-        "monto": "67000"
+        "monto": 67000
     }
 ]

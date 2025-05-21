@@ -75,7 +75,7 @@ def list_all_cost():
         else:
             print('No hay costos registrados')
 
-    if (option_l == 2):
+    elif (option_l == 2):
         """filtro por categorias"""
         print('\nPor favor mensione la categoria: ')
         cate = input('> ')
@@ -88,7 +88,7 @@ def list_all_cost():
         else:
             print('No hay datos.\n')
 
-    if (option_l == 3):
+    elif (option_l == 3):
         """filtro por rango de fechas"""
         print('\nEl formato es AA-MM-DD')
         desde = input('Desde: ')
@@ -107,7 +107,7 @@ def list_all_cost():
         else:
             print('No hay datos.\n')
 
-    if (option_l == 4):
+    elif (option_l == 4):
         """Volver al menu principal"""
         print('\n')
         return True
@@ -140,15 +140,15 @@ def sum_all_cost():
         mes = int(datetime.now().strftime('%m'))
         print(f'\nGasto total del del dia de hoy {hoy} del mes {mes}: {total_cost(option_s, hoy)}')
 
-    if (option_s == 2):
+    elif (option_s == 2):
         """Calcula y muestra el total de gastos de los últimos siete días."""
         print(total_cost(option_s, hoy))
 
-    if (option_s == 3):
+    elif (option_s == 3):
         """Calcula y muestra el total de gastos del último mes."""
         print(total_cost(option_s, hoy))
 
-    if (option_s == 4):
+    elif (option_s == 4):
         """Volver al menú de incio."""
         print('\n')
         return True
@@ -179,13 +179,13 @@ def generate_cost_report():
     if (option_p == 1):
         pass
 
-    if (option_p == 2):
+    elif (option_p == 2):
         pass
 
-    if (option_p == 3):
+    elif (option_p == 3):
         pass
 
-    if (option_p == 4):
+    elif (option_p == 4):
         print('\n')
         return True
 
