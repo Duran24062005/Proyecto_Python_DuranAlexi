@@ -42,6 +42,6 @@ Muchos usuarios desean llevar un registro de sus gastos, pero las aplicaciones d
 
     :books: [Docs](https://gist.github.com/programmersland/cf9362472f1b9f245415d9cee96c7aef)
     
-    :movie_camera: [Video de sustentación](https://youtube.com)
+    :movie_camera: [Video de sustentación](https://youtu.be/_FAH4UzHU9Q)
 
  Desarrollado por Alexi Durán Gómez : C.C-1.067.031.983

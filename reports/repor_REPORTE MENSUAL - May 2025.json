@@ -128,7 +128,31 @@
             "categoria": "transporte",
             "descripcion": "bus",
             "monto": 20148
+        },
+        {
+            "id": 217,
+            "fecha": "2025-05-21",
+            "hora": "20:48:10",
+            "categoria": "comida",
+            "descripcion": "almuerzo con mis amigos",
+            "monto": 50000
+        },
+        {
+            "id": 218,
+            "fecha": "2025-05-21",
+            "hora": "20:48:42",
+            "categoria": "transporte",
+            "descripcion": "Compra de moto",
+            "monto": 30000
+        },
+        {
+            "id": 219,
+            "fecha": "2025-05-21",
+            "hora": "22:59:06",
+            "categoria": "Comida",
+            "descripcion": "Salida con mis amigos de campus",
+            "monto": 34000
         }
     ],
-    "total_gastado": 298580.0
+    "total_gastado": 412580.0
 }
