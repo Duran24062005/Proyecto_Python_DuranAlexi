@@ -1,0 +1,134 @@
+{
+    "titulo": "REPORTE MENSUAL - May 2025",
+    "desde": "2025-05-01",
+    "hasta": "2025-05-21",
+    "gastos": [
+        {
+            "id": 13,
+            "fecha": "2020-05-13",
+            "categoria": "salud",
+            "descripcion": "control médico",
+            "monto": 19339
+        },
+        {
+            "id": 14,
+            "fecha": "2020-05-01",
+            "categoria": "salud",
+            "descripcion": "control médico",
+            "monto": 24243
+        },
+        {
+            "id": 15,
+            "fecha": "2020-05-10",
+            "categoria": "ocio",
+            "descripcion": "película",
+            "monto": 14494
+        },
+        {
+            "id": 49,
+            "fecha": "2021-05-11",
+            "categoria": "transporte",
+            "descripcion": "metro",
+            "monto": 13372
+        },
+        {
+            "id": 50,
+            "fecha": "2021-05-13",
+            "categoria": "hogar",
+            "descripcion": "agua",
+            "monto": 8295
+        },
+        {
+            "id": 51,
+            "fecha": "2021-05-01",
+            "categoria": "salud",
+            "descripcion": "dentista",
+            "monto": 18173
+        },
+        {
+            "id": 85,
+            "fecha": "2022-05-04",
+            "categoria": "transporte",
+            "descripcion": "bus",
+            "monto": 17452
+        },
+        {
+            "id": 86,
+            "fecha": "2022-05-12",
+            "categoria": "salud",
+            "descripcion": "medicinas",
+            "monto": 2918
+        },
+        {
+            "id": 87,
+            "fecha": "2022-05-23",
+            "categoria": "hogar",
+            "descripcion": "gas",
+            "monto": 14822
+        },
+        {
+            "id": 121,
+            "fecha": "2023-05-16",
+            "categoria": "transporte",
+            "descripcion": "taxi",
+            "monto": 21149
+        },
+        {
+            "id": 122,
+            "fecha": "2023-05-20",
+            "categoria": "salud",
+            "descripcion": "dentista",
+            "monto": 29655
+        },
+        {
+            "id": 123,
+            "fecha": "2023-05-14",
+            "categoria": "hogar",
+            "descripcion": "electricidad",
+            "monto": 28403
+        },
+        {
+            "id": 157,
+            "fecha": "2024-05-08",
+            "categoria": "ocio",
+            "descripcion": "teatro",
+            "monto": 25147
+        },
+        {
+            "id": 158,
+            "fecha": "2024-05-23",
+            "categoria": "salud",
+            "descripcion": "dentista",
+            "monto": 3393
+        },
+        {
+            "id": 159,
+            "fecha": "2024-05-08",
+            "categoria": "salud",
+            "descripcion": "control médico",
+            "monto": 7132
+        },
+        {
+            "id": 193,
+            "fecha": "2025-05-10",
+            "categoria": "ocio",
+            "descripcion": "película",
+            "monto": 27058
+        },
+        {
+            "id": 194,
+            "fecha": "2025-05-07",
+            "categoria": "salud",
+            "descripcion": "control médico",
+            "monto": 3387
+        },
+        {
+            "id": 195,
+            "fecha": "2025-05-05",
+            "categoria": "transporte",
+            "descripcion": "bus",
+            "monto": 20148
+        }
+    ],
+    "total_gastado": 298580.0
+}

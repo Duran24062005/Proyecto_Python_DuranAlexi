@@ -40,4 +40,17 @@ def logsJSON(dic):
 
     return True
 
+
+def abirJSONReport(date, content):
+    path = f"./reports/repor_{date}"
+    with open(path, 'w') as newReport:
+        json.dump(content , newReport)
+
+def guardarJSONReports(reporte_json, name):
+    filename = f"./reports/repor_{name}.json"
+    # Guardar como archivo JSON
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(reporte_json, f, indent=4, ensure_ascii=False)
+
+
 # Desarrollado por Alexi Durán Gómez : C.C-1.067.031.983

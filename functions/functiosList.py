@@ -1,7 +1,8 @@
 # Proyecto_Python_DuranAlexi
 # Controller file: El archivo controler o controlador es un archivo creado para aislar la logica de funcionamiento del programa 
 # con el objetivo de modularizarlo y que de está manera sea mucho más legible al igual que facil de modificar.
-from datetime import datetime
+from datetime import datetime, timedelta
+from tabulate import tabulate
 from db.test_data import test_db
 from functions.crud_persistent import *
 from functions.auxfunctions import *
@@ -61,7 +62,6 @@ def filter_by_category(category):
     else:
         return False
 
-# TODO
 def filter_by_range_date(por, _from, to,):
     """
     Esta función está diseñada para filtrar por año, meses y dias.
@@ -100,12 +100,12 @@ def filter_by_range_date(por, _from, to,):
         else:
             return False
 
-    elif (por == 2):
+    elif (por == 3):
         """Filtar por rango de dias"""
         desde = datetime.strptime(_from, '%Y-%m-%d').day
         hasta = datetime.strptime(to, '%Y-%m-%d').day
         for i in range(len(datos)):
-            day = datetime.strptime(datos[i]['fecha'], '%Y-%m-%d').month
+            day = datetime.strptime(datos[i]['fecha'], '%Y-%m-%d').day
             if desde <= day <= hasta:
                 rngs.append(datos[i])
         if rngs:
@@ -122,6 +122,7 @@ def total_cost(opt, today):
         1. Del día.
         2. De la ultima semana.
         3. Del ultimo mes.
+        4. De la semana actual.
     """
     costo = 0
     datos = abrirJSON()
@@ -133,7 +134,7 @@ def total_cost(opt, today):
                 costo += int(datos[i]['monto'])
 
         return costo
-    # TODO
+
     elif (opt == 2):
         """Suma de los gastos del la ultima semana"""
         for i in range(len(datos)):
@@ -142,7 +143,7 @@ def total_cost(opt, today):
                 costo += int(datos[i]['monto'])
 
         return costo
-    # TODO
+
     elif (opt == 3):
         """Suma de los gastos del ultimo mes"""
         for i in range(len(datos)):
@@ -150,6 +151,18 @@ def total_cost(opt, today):
                 costo += int(datos[i]['monto'])
 
         return costo
+
+    elif (opt == 4):
+        """Suma de los gastos de la semana actual"""
+        for i in range(len(datos)):
+            fecha = datetime.strptime(datos[i]['fecha'], '%Y-%m-%d')
+            semana_actual = datetime.now().isocalendar()[1]
+            semana_gasto = fecha.isocalendar()[1]
+            if (semana_gasto == semana_actual):
+                costo += int(datos[i]['monto'])
+
+        return costo
+
 
 def cost_report(opts):
     """
@@ -160,16 +173,55 @@ def cost_report(opts):
         2. Genera un reporte con los gastos de la última semana.
         3. Genera un reporte con los gastos del último mes.
     """
-    if(opts == 1):
-        """Genera un reporte con los gastos del día actual."""
-        pass
+    hoy = datetime.now()
+    hoy_str = hoy.strftime("%Y-%m-%d")
 
-    elif (opts == 2):
-        """Genera un reporte con los gastos de la última semana."""
+    if opts == 1:  # Diario
+        desde = hasta = hoy_str
+        by = 3  # Filtrar por día
+        titulo = f"REPORTE DIARIO - {hoy_str}"
 
-    elif (opts == 3):
-        """Genera un reporte con los gastos del último mes."""
-        pass
+    elif opts == 2:  # Semanal
+        desde = (hoy - timedelta(days=6)).strftime("%Y-%m-%d")
+        hasta = hoy_str
+        by = 4
+        titulo = f"REPORTE SEMANAL - Del {desde} al {hasta}"
+
+    elif opts == 3:  # Mensual
+        desde = hoy.replace(day=1).strftime("%Y-%m-%d")
+        hasta = hoy_str
+        by = 2  # Filtrar por mes
+        titulo = f"REPORTE MENSUAL - {hoy.strftime('%B %Y')}"
+
+    else:
+        return "Opción de reporte no válida."
+
+    # Obtener datos
+    gastos = filter_by_range_date(by, desde, hasta)
+
+    if not gastos:
+        return f"{titulo}\nNo hay datos disponibles para este periodo.\n"
+
+    # Generar tabla
+    tabla = tabulate(gastos, headers='keys', tablefmt='rounded_grid')
+
+    # Calcular total
+    total = sum(float(gasto['monto']) for gasto in gastos)
+
+    # Crear diccionario para guardar en JSON
+    reporte_json = {
+        "titulo": titulo,
+        "desde": desde,
+        "hasta": hasta,
+        "gastos": gastos,
+        "total_gastado": total
+    }
+
+    guardarJSONReports(reporte_json, reporte_json['titulo'])
+
+    # Armar informe
+    informe = f"{titulo}\n\n{tabla}\n\nTOTAL GASTADO: ${total:.2f}\n"
+    return informe
   
 
 

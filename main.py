@@ -2,7 +2,6 @@
 # Main, entrada del proyecto
 from controllers.menu_controller import *
 
-# TODO
 # Hacer actualización en el archivo README.md y agregar un nuevo registro de documentación
 # Link: https://pypi.org/project/tabulate/
 

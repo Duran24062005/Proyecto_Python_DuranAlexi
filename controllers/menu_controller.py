@@ -9,7 +9,6 @@ def register_new_cost():
     """
         Esta funcion se encarga de mostrar la parte del menú para registra un nuevo gasto.
         No recibe parametros.
-        # TODO
         Muestra por pantalla el mesanje ¡¡Costo guardado exitosamente!! si fue creado correctamente.
         O el mensaje Costo no guardado!! si no lo fue.
         Y ¡Por favor, elija una opción valida! en el dado caso.
@@ -177,13 +176,13 @@ def generate_cost_report():
     option_p = int(input('> '))
 
     if (option_p == 1):
-        pass
+        print(cost_report(option_p))
 
     elif (option_p == 2):
-        pass
+        print(cost_report(option_p))
 
     elif (option_p == 3):
-        pass
+        print(cost_report(option_p))
 
     elif (option_p == 4):
         print('\n')

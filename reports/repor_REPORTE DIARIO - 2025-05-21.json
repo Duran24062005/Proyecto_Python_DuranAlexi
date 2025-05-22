@@ -1,0 +1,71 @@
+{
+    "titulo": "REPORTE DIARIO - 2025-05-21",
+    "desde": "2025-05-21",
+    "hasta": "2025-05-21",
+    "gastos": [
+        {
+            "id": 18,
+            "fecha": "2020-06-21",
+            "categoria": "comida",
+            "descripcion": "desayuno",
+            "monto": 13867
+        },
+        {
+            "id": 24,
+            "fecha": "2020-08-21",
+            "categoria": "salud",
+            "descripcion": "medicinas",
+            "monto": 25572
+        },
+        {
+            "id": 59,
+            "fecha": "2021-08-21",
+            "categoria": "salud",
+            "descripcion": "control médico",
+            "monto": 19753
+        },
+        {
+            "id": 77,
+            "fecha": "2022-02-21",
+            "categoria": "transporte",
+            "descripcion": "metro",
+            "monto": 25155
+        },
+        {
+            "id": 105,
+            "fecha": "2022-11-21",
+            "categoria": "transporte",
+            "descripcion": "taxi",
+            "monto": 22171
+        },
+        {
+            "id": 133,
+            "fecha": "2023-09-21",
+            "categoria": "transporte",
+            "descripcion": "metro",
+            "monto": 25315
+        },
+        {
+            "id": 143,
+            "fecha": "2023-12-21",
+            "categoria": "comida",
+            "descripcion": "desayuno",
+            "monto": 12729
+        },
+        {
+            "id": 164,
+            "fecha": "2024-07-21",
+            "categoria": "transporte",
+            "descripcion": "bus",
+            "monto": 3669
+        },
+        {
+            "id": 210,
+            "fecha": "2025-10-21",
+            "categoria": "ocio",
+            "descripcion": "película",
+            "monto": 8377
+        }
+    ],
+    "total_gastado": 156608.0
+}
